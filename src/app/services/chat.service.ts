@@ -11,12 +11,11 @@ export class ChatService {
 
   constructor(private firestore: AngularFirestore) { }
 
-  getLastMessages() {
+   getLastMessages() {
     return this.messagesCollection.snapshotChanges().pipe(
       map(actions => actions.map(action => {
-        const data = action.payload.doc.data() as Omit<Message, 'id'>;
-        const id = action.payload.doc.id;
-        return { id, ...data } as Message;
+        const data = action.payload.doc.data() as Message
+        return {  ...data } as Message;
       }).reverse())
     );
   }
