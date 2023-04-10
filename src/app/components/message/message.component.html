@@ -1,0 +1,10 @@
+<div class="message" *ngIf="message">
+    <strong>{{ message.author }}:</strong> {{ message.content }}
+    <button mat-icon-button *ngIf="isAuthor()" (click)="editMessage()">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button *ngIf="isAuthor()" (click)="deleteMessage()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angularchat-5b906": {
+      "hosting": {
+        "project0": [
+          "angular-cristi-chat"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angularchat-5b906"
+  }
+}
